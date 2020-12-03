@@ -17,7 +17,7 @@ namespace DiscordBot
         [Command("hi")]
         public async Task Hi(CommandContext ctx)
         {
-            await ctx.RespondAsync($"👋 Hi, {ctx.User.Mention}!");
+            await ctx.RespondAsync($"fuck you {ctx.User.Mention}!");
             var interactivity = ctx.Client.GetInteractivityModule();
             var msg = await interactivity.WaitForMessageAsync(xm => xm.Author.Id == ctx.User.Id && xm.Content.ToLower() == "how are you?", TimeSpan.FromMinutes(1));
             if (msg != null)
