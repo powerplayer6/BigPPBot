@@ -30,6 +30,12 @@ namespace DiscordBot
             await ctx.RespondAsync($"https://cdn.memegenerator.es/imagenes/memes/full/30/33/30338243.jpg");
         }
 
+        [Command("fan")]
+        public async Task Fan(CommandContext ctx)
+        {
+            await ctx.RespondAsync($"https://i.imgur.com/XxUT2VR.png");
+        }
+
         [Command("retard")]
         public async Task Buddy(CommandContext ctx)
         {
@@ -41,6 +47,12 @@ namespace DiscordBot
         public async Task Okay(CommandContext ctx)
         {
             await ctx.RespondAsync($"https://cdn.discordapp.com/avatars/513697905266393102/c497a828768ef32ea0b7eb896e41a03e.png?size=4096");
+        }
+
+        [Command("dummkopf")]
+        public async Task Dummkopf(CommandContext ctx)
+        {
+            await ctx.RespondAsync($"https://i.redd.it/dtdnkprbijz11.jpg");
         }
 
         [Command("size")]
@@ -217,13 +229,13 @@ namespace DiscordBot
 
             //avid1
             string[] a2 = { "bogan", "stupid", "bitch", "dumb", "pussy", "absolute" };
-            string[] b2 = { " little", " ranga", " didgeridoo", "-ass", " bitch", " smoothbrained", " even more stupid than my water bottle" };
+            string[] b2 = { " little", " lidl", " ranga", " didgeridoo", "-ass", " bitch", " smoothbrained", " even more stupid than my water bottle" };
             string[] c2 = { " cunt", " bitch", " dimwit", " bobo", " piece of shit"};
             string[] d2 = { "you explode in front of your chickens and your guts go flying everywhere and they peck at your remains only to develop an appetite for human flesh and eat your whole family and everyone you love", "parrots peck your eyebalsl out", "your car crashes and you die and your friends have to throw your body in some roadside ditch", "you become human bacon", "all your teeth rot and they fall out", "possums chew your thumbs off in your sleep tonight", "termites eat you alive while you sleep goodnight", "you choke on eggs" };
 
             //golga10
             string[] a3 = { "bonk", "bink", "bonkus", "bungus", "bing", "bling", "bünk", "book", "bukt", "bücher" };
-            string[] b3 = { "wank", "bonk", "wonkus", "wungus", "wong", "blang", "würm", "worm" };
+            string[] b3 = { "wank", "bonk", "wonkus", "wungus", "wong", "blang", "würm", "worm", "🪱" };
             string[] c3 = { "cowards", "fools", "disappointments", "idots", "idiots", "dumdums", "absolute fools", "bitches", "verzögert", "sluts" };
 
             //pp1
