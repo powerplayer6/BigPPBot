@@ -17,6 +17,9 @@ namespace DiscordBot
         public static string line = lines[lines.Length - 1]; // takes the last row
         public static int epicCounter = int.Parse(line); // makes the last row the new counter number
 
+        public static string[] tokens = System.IO.File.ReadAllLines(@"C:\Users\Public\TestFolder\token.txt");
+        public static string token = tokens[tokens.Length - 1];
+
         public static DateTime starterTime = DateTime.Now;
 
         static InteractivityModule interactivity;
@@ -30,7 +33,7 @@ namespace DiscordBot
         {
             discord = new DiscordClient(new DiscordConfiguration
             {
-                Token = "NTEzNjk3OTA1MjY2MzkzMTAy.W_FgdA.ITyIf2B6w8vBfM3JzeKytJXXn_w",
+                Token = token,
                 TokenType = TokenType.Bot,
                 UseInternalLogHandler = true,
                 LogLevel = LogLevel.Debug,
