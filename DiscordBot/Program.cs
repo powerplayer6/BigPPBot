@@ -41,6 +41,17 @@ namespace DiscordBot
             });
             discord.MessageCreated += async e =>
             {
+                if (e.Message.Content.Length>=170 && e.Message.Author.IsBot==false)
+                {
+                    await e.Message.RespondAsync(e.Message.Content);
+                    using (System.IO.StreamWriter file =
+                        new System.IO.StreamWriter(@"C:\Users\Public\TestFolder\pasta.txt", true))
+                    {
+                        file.WriteLine(e.Message.Content.ToString());
+                        file.WriteLine();
+                    }
+                }
+
                 if (e.Message.Content.StartsWith("FRANZ"))
                 { await e.Message.RespondAsync("HANSDI"); }
                 if (e.Message.Content.ToLower()=="bad bot")
