@@ -41,7 +41,7 @@ namespace DiscordBot
             });
             discord.MessageCreated += async e =>
             {
-                if (e.Message.Content.Length>=170 && e.Message.Author.IsBot==false)
+                if (e.Message.Content.Length>=350 && e.Message.Author.IsBot==false)
                 {
                     await e.Message.RespondAsync(e.Message.Content);
                     using (System.IO.StreamWriter file =
