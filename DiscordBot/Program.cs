@@ -12,6 +12,9 @@ namespace DiscordBot
 {
     public class Program
     {
+        public static int cnt = 0;
+        public static string mes1, mes2;
+
         public static string[] lines = System.IO.File.ReadAllLines(@"C:\Users\Public\TestFolder\WriteLines2.txt");
         // ^ reads the file
         public static string line = lines[lines.Length - 1]; // takes the last row
@@ -41,7 +44,7 @@ namespace DiscordBot
             });
             discord.MessageCreated += async e =>
             {
-                if (e.Message.Content.Length>=350 && e.Message.Author.IsBot==false)
+                /*if (e.Message.Content.Length>=350 && e.Message.Author.IsBot==false) //copypasta
                 {
                     await e.Message.RespondAsync(e.Message.Content);
                     using (System.IO.StreamWriter file =
@@ -50,6 +53,79 @@ namespace DiscordBot
                         file.WriteLine(e.Message.Content.ToString());
                         file.WriteLine();
                     }
+                }*/
+
+                /*if (cnt == 2 && e.Message.Author.IsBot == false)
+                {
+                    mes2 = e.Message.Content;
+                    if (mes1 == mes2)
+                    {
+                        await e.Message.RespondAsync(mes2);
+                        cnt = 0;
+                    }
+                    else
+                    {
+                        mes1 = e.Message.Content;
+                        cnt = 1;
+                    }
+                }
+                if (cnt == 1 && e.Message.Author.IsBot == false)
+                {
+                    mes2 = e.Message.Content;
+                    if (mes2 == mes1)
+                    {
+                        cnt++;
+                    }
+                    else
+                    {
+                        mes1 = e.Message.Content;
+                    }
+                }
+                if (cnt==0 && e.Message.Author.IsBot==false)
+                {
+                    mes1 = e.Message.Content;
+                    cnt++;
+                }*/
+
+                switch (cnt) //the 4 horsemen
+                {
+                    case 0:
+                        if (e.Message.Author.IsBot == false)
+                        {
+                            mes1 = e.Message.Content;
+                            cnt++;
+                        }
+                        break;
+                    case 1:
+                        if (e.Message.Author.IsBot == false)
+                        {
+                            mes2 = e.Message.Content;
+                            if (mes2 == mes1)
+                            {
+                                cnt++;
+                            }
+                            else
+                            {
+                                mes1 = e.Message.Content;
+                            }
+                        }
+                        break;
+                    case 2:
+                        if (e.Message.Author.IsBot == false)
+                        {
+                            mes2 = e.Message.Content;
+                            if (mes1 == mes2)
+                            {
+                                await e.Message.RespondAsync(mes2);
+                                cnt = 0;
+                            }
+                            else
+                            {
+                                mes1 = e.Message.Content;
+                                cnt = 1;
+                            }
+                        }
+                        break;
                 }
 
                 if (e.Message.Content.StartsWith("FRANZ"))
