@@ -211,6 +211,12 @@ namespace DiscordBot
             await ctx.RespondAsync("https://cdn.discordapp.com/attachments/534308826133037096/663388556252676108/received_955561124809380.jpeg");
         }
 
+        [Command("jojo")]
+        public async Task Jojo(CommandContext ctx)
+        {
+            await ctx.RespondAsync("https://cdn.discordapp.com/attachments/534308826133037096/789632531673907210/unknown.png");
+        }
+
         [Command("madlibs")]
         [Description("vayn1, vayn2, avid1, golga10, pp1")]
         public async Task Madlibs(CommandContext ctx)
