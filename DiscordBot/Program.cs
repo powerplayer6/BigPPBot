@@ -151,9 +151,13 @@ namespace DiscordBot
                 if (e.Message.Content.ToLower() == "p!uptime") //uptime counter test
                 {
                     TimeSpan taim = DateTime.Now - starterTime;
-                    await e.Message.RespondAsync("Uptime: "+taim.Hours+" hours, "+taim.Minutes+" minutes and "+taim.Seconds+" seconds");
+                    await e.Message.RespondAsync("Uptime: "+taim.Days+" days, "+taim.Hours+" hours, "+taim.Minutes+" minutes and "+taim.Seconds+" seconds");
                 }
-            };
+                if (e.Message.Content.ToLower().Contains("fuck pp"))
+                {
+                    await e.Message.RespondAsync("fuck you too");
+                }
+                };
             interactivity = discord.UseInteractivity(new InteractivityConfiguration
             {
                 // default pagination behaviour to just ignore the reactions

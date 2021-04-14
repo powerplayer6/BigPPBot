@@ -224,10 +224,10 @@ namespace DiscordBot
             Random rnd = new Random();
             //vayn1
             string[] a = { "direction of", "framing in", "symbolism of", "shot-framing of", "storyboard of" };
-            string[] b = { "this scene", "this shot", "this anime", "OreGairu", "Monogatari", "Gridman 9" };
-            string[] c = { "spectacular", "stellar", "amazing", "brilliant" };
+            string[] b = { "this scene", "this shot", "this anime", "OreGairu", "Monogatari", "Gridman 9", "Egg", "Dynazenon" };
+            string[] c = { "spectacular", "stellar", "amazing", "brilliant", "kino" };
             string[] d = { "marvel", "wonder", "great example" };
-            string[] e = { "artist integrity", "modern anime", "the staff's talent" };
+            string[] e = { "artist integrity", "modern anime", "the staff's talent", "the young talents in the industry" };
 
             //vayn2
             string[] a1 = { "my balls to be crushed", "my balls to be stepped on", "to be stepped on", "to be dominated", "to be looked down upon", "to be trashtalked", "to be murdered just a little" };
@@ -237,7 +237,7 @@ namespace DiscordBot
             string[] a2 = { "bogan", "stupid", "bitch", "dumb", "pussy", "absolute" };
             string[] b2 = { " little", " lidl", " ranga", " didgeridoo", "-ass", " bitch", " smoothbrained", " even more stupid than my water bottle" };
             string[] c2 = { " cunt", " bitch", " dimwit", " bobo", " piece of shit"};
-            string[] d2 = { "you explode in front of your chickens and your guts go flying everywhere and they peck at your remains only to develop an appetite for human flesh and eat your whole family and everyone you love", "parrots peck your eyebalsl out", "your car crashes and you die and your friends have to throw your body in some roadside ditch", "you become human bacon", "all your teeth rot and they fall out", "possums chew your thumbs off in your sleep tonight", "termites eat you alive while you sleep goodnight", "you choke on eggs" };
+            string[] d2 = { "you explode in front of your chickens and your guts go flying everywhere and they peck at your remains only to develop an appetite for human flesh and eat your whole family and everyone you love :)", "parrots peck your eyebalsl out", "your car crashes and you die and your friends have to throw your body in some roadside ditch", "you become human bacon", "all your teeth rot and they fall out", "possums chew your thumbs off in your sleep tonight", "termites eat you alive while you sleep goodnight", "you choke on eggs" };
 
             //golga10
             string[] a3 = { "bonk", "bink", "bonkus", "bungus", "bing", "bling", "bünk", "book", "bukt", "bücher" };
@@ -247,6 +247,9 @@ namespace DiscordBot
             //pp1
             string[] a4 = { "read Catulus", "watch Saiki", "watch Persona 3", "play Persona 3", "play Persona 5", "watch Sora no Woto", "read Bakarina novels", "play Genshin" };
             string[] b4 = { "rartard", "absolute coward", "actual retard", "internetdude", "coward", "bastard" };
+
+            //tamaki1
+            string[] a5 = { "Okay look right here :eyes: Yuru Camp is NOT cgdct. Lets take a quick look at what CGDCT even means:\n\"Cute Girls Doing Cute Things.\"\nAs we can see, CGDCT revolve around two basic ideas, first we need a cast of cute girls, and second those cute girls must spend most of the runtime of the anime doing cute things. Yuru Camp fails at the most basic part of what makes a CGDCT a CGDCT. \nThe girls are NOT cute. An example of a cute girl would be Yui from K-oN!! Put Yui next to, I dunno, the pink haired twat from Yuro Camp and you'll se what I mean, the girls in Yurio Camo are just boring people, there's nothing cute about them, they're just as cute as- I dunno, random classmate B from Random school anime C. \n\nSo guys, please stop calling Yuru Yuri Camp :triangular_ruler: a CGDCT.", "\"You guys are so weird\" <- Those are the words I think to myself every time you say something. Or at least some variation of that, a large number of the times I swap it around a but and use words like \"retarded\" and \"autistic\" . But whatever, the point is that you're a bunch of weirdos. First of all you're always talking about how things are \"gay\" stop using that word, even as a joke its not nice to go around calling people \"hyper mega gay\" or anything because GAY is not an insult, please stop using it as such, it is rude and insensitive to all the gay people around the world. And on another note, since I'm already here I would like to inform you that just because an anime girl *has legs** doesn't mean she is THICC, what does that even mean? I assume its just a weird misspelling of the word \"Thick\" (please start spelling it correctly by the way), I mean, I see you guys calling any girl with arms and legs \"thicc\" even if they're just- well whatever, just stop its weird. Your taste in manga is garbage, every time a new chapter of We Never Learn comes out you're always like \"Oh boy, the new Bokuben was :VanillaGasm: :GWjojoGachiWoke: \" or something, and then I go to read it and it makes me hate the manga even more :GWsetmyxPeepoWeird: since every new chapter tends to suck... please stop having this taste, lower your scores for this manga to at most a 2/10 to align with my own taste, it annoys me whenever people have such lame taste. And- umm, emote spam, yeah. Quit spamming random emotes. That's all for now. To be continued..."};
 
             if (ctx.Message.Content.ToLower().Remove(0, 10)=="vayn1") //vayn symbolism
             {
@@ -265,9 +268,14 @@ namespace DiscordBot
                 await ctx.RespondAsync("Golga: Read " + a3[rnd.Next(0, a3.Length)] + b3[rnd.Next(0, b3.Length)] + " you " + c3[rnd.Next(0, c3.Length)]);
             }
 
-            if (ctx.Message.Content.ToLower().Remove(0, 10) == "pp1") //pp
+            if (ctx.Message.Content.ToLower().Remove(0, 10) == "pp6") //pp
             {
                 await ctx.RespondAsync("PP: ID, "+ a4[rnd.Next(0, a4.Length)]+" you "+ b4[rnd.Next(0, b4.Length)]);
+            }
+
+            if (ctx.Message.Content.ToLower().Remove(0, 10) == "tamaki1") //tamaki
+            {
+                await ctx.RespondAsync(a5[rnd.Next(0, a5.Length)]);
             }
         }
     }
